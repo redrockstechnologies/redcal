@@ -1,0 +1,16 @@
+node_modules reinstall instructions
+===================================
+Directory:        /Users/jasonnienaber/RED/reference/calcom/packages/trpc
+Removed on:       2026-10-08 (node_modules was 20K)
+Package manager:  yarn (v4, via corepack)
+Detected from:    workspace package of the reference/calcom monorepo (no lockfile of its own)
+
+To reinstall, run from this directory:
+
+    (cd "/Users/jasonnienaber/RED/reference/calcom" && corepack enable && yarn install)
+
+For an exact reinstall of the locked versions:
+
+    (cd "/Users/jasonnienaber/RED/reference/calcom" && yarn install --immutable)
+
+Note: Do NOT run an install in this directory. It is a workspace package; installing from the monorepo root recreates this node_modules.

@@ -1,0 +1,18 @@
+node_modules reinstall instructions
+===================================
+Directory:        /Users/jasonnienaber/RED/reference/calcom
+Removed on:       2026-10-08 (node_modules was 3,3G)
+Package manager:  yarn (v4, via corepack)
+Detected from:    yarn.lock + "packageManager": "yarn@4.12.0" in package.json
+
+To reinstall, run from this directory:
+
+    corepack enable && yarn install
+
+For an exact reinstall of the locked versions:
+
+    yarn install --immutable
+
+Runs automatically on install ("postinstall" script): husky install && turbo run post-install
+
+Note: This is the root of a yarn workspaces monorepo: this one command also reinstalls the node_modules of every workspace package (apps/*, packages/*, example-apps/*).
